@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<body>
+
+<h2>HTML Forms</h2>
+
+<form action="model" method="post" th:object="${formAO}">
+  <label for="name">First name:</label>
+  <input type="text" id="name" name="name" placeholder="what is you name?" th:field="*{name}" ><br>
+  <input type="submit" value="Submit">
+</form> 
+
+
+</body>
+</html>

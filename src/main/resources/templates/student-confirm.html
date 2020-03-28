@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<body th:object="${student}">
+
+<h2>Student Confirmation</h2>
+<p th:text="*{firstName}+ ' ' + *{lastName}"></p>
+<p th:text="*{country}"></p>
+<p th:text="*{favoriteLanguage}"></p>
+<p th:text="*{favoriteHobby}"></p>
+
+
+</body>
+</html>

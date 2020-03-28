@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<body th:object="${customerAO}">
+
+<h2>Customer Confirmation</h2>
+<p th:text="*{fName}+ ' ' + *{lName}"></p>
+<p th:text="*{pass}"></p>
+<p th:text="*{postalCode}"></p>
+<p th:text="*{courceCode}"></p>
+
+
+
+</body>
+</html>

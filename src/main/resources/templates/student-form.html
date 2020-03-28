@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<body>
+
+<h2>HTML Forms</h2>
+
+<form th:action="@{/student/processForm}" method="post" th:object="${student}">
+  <label for="name">First name:</label>
+  <input type="text" id="fname" name="fname" placeholder="first name" th:field="*{firstName}" ><br>
+  <input type="text" id="lname" name="lname" placeholder="last name" th:field="*{lastName}" ><br>
+  <input type="submit" value="Submit">
+  
+  <select th:field="*{country}">
+  <option th:each="country : *{countryOptions.values()}" th:value="${country}"  th:text="${country}"  ></option>
+</select>
+
+C++<input type="checkbox" th:field="*{favoriteLanguage}" value="C++"/>
+Java<input type="checkbox" th:field="*{favoriteLanguage}" value="Java"/>
+PHP<input type="checkbox" th:field="*{favoriteLanguage}" value="PHP"/>
+JavaScript<input type="checkbox" th:field="*{favoriteLanguage}" value="JavaScript"/>
+
+
+Sport<input type="radio" th:field="*{favoriteHobby}" value="Sport"/>
+Travel<input type="radio" th:field="*{favoriteHobby}" value="Travel"/>
+Swimming<input type="radio" th:field="*{favoriteHobby}" value="Swimming"/>
+Learning<input type="radio" th:field="*{favoriteHobby}" value="Learning"/>
+</form> 
+
+</body>
+</html>
